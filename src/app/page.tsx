@@ -1,9 +1,11 @@
 import Image from "next/image";
 
+import Main from "./Main";
+
 export default function Home() {
   return (
     <div>
-      <h1>Hi, my name is Alex</h1>
+      <Main/>
     </div>
   );
 }
