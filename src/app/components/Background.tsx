@@ -1,6 +1,8 @@
 "use client";
 import React, { useEffect, useRef } from 'react';
 
+import { Spotlight } from "./ui/Spotlight";
+
 const Background: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
