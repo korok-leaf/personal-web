@@ -9,6 +9,7 @@ function Main() {
     return (
         <div>
             <Background/>
+            <Header/>
             <Intro/>
         </div>
     );
