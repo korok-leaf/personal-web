@@ -16,7 +16,7 @@ export default function Intro() {
     const intro = "Alex Qin";
 
     return (
-        <div className="h-[40rem] w-full rounded-md flex md:items-center md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden">
+        <div className="bg-transparent w-full rounded-md flex md:items-center md:justify-center antialiased relative overflow-scroll mt-20">
             
             <div className=" p-4 max-w-7xl  mx-auto relative z-10  w-full pt-20 md:pt-0">
                 <p className="mt-4 font-normal text-4xl text-neutral-300 max-w-lg text-center mx-auto">
@@ -25,15 +25,15 @@ export default function Intro() {
                 <h1 className="text-4xl md:text-7xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
                     <TextGenerateEffect duration={3} filter={false} words={intro} />
                 </h1>
-                {/*<div className="flex justify-center items-center">
+                <div className="flex justify-center items-center">
                     <Image
                         src="/korok.jpg"
                         alt="A beautiful landscape"
                         width={500} // Set width of the image
                         height={300} // Set height of the image
-                        className="rounded-lg shadow-lg"
+                        className="rounded-full shadow-lg"
                     />
-                </div>*/}
+                </div>
 
                 <p className="mt-4 font-normal text-lg text-neutral-300 max-w-lg text-center mx-auto">
                     I am a Computer Science student at the University of Waterloo
