@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Header() {
+const Header = () => {
 
   const handleClick = () => {
     
@@ -13,3 +13,5 @@ export default function Header() {
     </div>
   );
 }
+
+export default Header;
