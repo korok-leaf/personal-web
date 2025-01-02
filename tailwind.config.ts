@@ -11,6 +11,8 @@ export default {
       animation: {
         spotlight: "spotlight 2s ease .75s 1 forwards",
         shrink: "shrink 1s ease-out forwards",
+        slideBottom: "slideBottom 1s ease-in forwards",
+        slideTop: "slideTop 1s ease-in forwards",
       },
 
       animationDelay: {
@@ -32,6 +34,27 @@ export default {
           "0%": { transform: "scale(1.5)" },
           "100%": { transform: "scale(1)" },
         },
+
+        slideBottom: {
+          "0%": {
+            transform: "translateY(100%)",
+            opacity: "0",
+          },
+          "100%": {
+            transform: "translateY(0)",
+            opacity: "1",
+          }
+        },
+        slideTop: {
+          "0%": {
+            transform: "translateY(-100%)",
+            opacity: "0",
+          },
+          "100%": {
+            transform: "translateY(0)",
+            opacity: "1",
+          }
+        }
       },
 
       colors: {
@@ -45,7 +68,7 @@ export default {
     },
   },
   plugins: [
-    function ({ addUtilities }) {
+    function ({ addUtilities }: { addUtilities: Function } ) {
       addUtilities(
         {
           '.animation-delay-500': {
