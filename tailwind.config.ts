@@ -10,6 +10,7 @@ export default {
     extend: {
       animation: {
         spotlight: "spotlight 2s ease .75s 1 forwards",
+        shrink: "shrink 1s ease-out",
       },
 
       keyframes: {
@@ -21,6 +22,11 @@ export default {
             transform: "translate(-50%,-40%) scale(1)",
           },
         },
+
+        shrink: {
+          "0%": { transform: "scale(1.5)"},
+          "100%": { transform: "scale(1)"},
+        }
       },
 
       colors: {

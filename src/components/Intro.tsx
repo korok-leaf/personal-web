@@ -31,7 +31,7 @@ export default function Intro() {
                         alt="A beautiful landscape"
                         width={500} // Set width of the image
                         height={300} // Set height of the image
-                        className="rounded-full shadow-lg"
+                        className="rounded-full shadow-lg animate-shrink delay-500"
                     />
                 </div>
 

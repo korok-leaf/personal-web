@@ -1,9 +1,9 @@
 import React from "react";
 
-import Intro from "./components/Intro";
-import Header from "./components/Header";
-import Background from "./components/Background";
-import BackgroundPic from "./components/BackgroundPic";
+import Intro from "../components/Intro";
+import Header from "../components/Header";
+import Background from "../components/Background";
+import BackgroundPic from "../components/BackgroundPic";
 
 const Main = () => {
 
