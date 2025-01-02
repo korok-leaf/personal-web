@@ -10,7 +10,12 @@ export default {
     extend: {
       animation: {
         spotlight: "spotlight 2s ease .75s 1 forwards",
-        shrink: "shrink 1s ease-out",
+        shrink: "shrink 1s ease-out forwards",
+      },
+
+      animationDelay: {
+        '500': '500ms',
+        '1000': '1000ms',
       },
 
       keyframes: {
@@ -24,9 +29,9 @@ export default {
         },
 
         shrink: {
-          "0%": { transform: "scale(1.5)"},
-          "100%": { transform: "scale(1)"},
-        }
+          "0%": { transform: "scale(1.5)" },
+          "100%": { transform: "scale(1)" },
+        },
       },
 
       colors: {
@@ -39,5 +44,19 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      addUtilities(
+        {
+          '.animation-delay-500': {
+            'animation-delay': '500ms',
+          },
+          '.animation-delay-1000': {
+            'animation-delay': '1000ms',
+          },
+        },
+        ['responsive', 'hover']
+      );
+    },
+  ],
 } satisfies Config;
