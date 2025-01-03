@@ -30,8 +30,8 @@ const Projects = () => {
         },
     ];
     return (
-        <div className="block p-10">
-            <div className="relative h-10">
+        <div className="relative p-10">
+            <div className="flex float-right">
                 <div className="flex float-left">
                     <Image
                         src="/korok.jpg"
@@ -41,14 +41,15 @@ const Projects = () => {
                         className="rounded-full shadow-lg scale-150 animate-profileA"
                     />
                 </div>
-                <Header/>
-            </div>
-            <div className="relative">
-                <div className="text-4xl text-center p-10 mb-4 font-normal">
-                    <TextGenerateEffect words={"Welcome to my Projects"}/>
+                <div className="flex right-0">
+                    <Header/>
                 </div>
+                
             </div>
-            <div className="relative">
+            <div className="flex w-full justify-center pb-10">
+                <TextGenerateEffect words={"Welcome to my Projects"}/>
+            </div>
+            <div className="flex w-full">
                 <FocusCards cards={cards} />;
             </div>
         </div>
