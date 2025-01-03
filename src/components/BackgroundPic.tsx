@@ -1,39 +1,46 @@
 "use client";
-import React from "react";
-import { useState, useEffect } from "react";
 
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 
 const BackgroundPic = () => {
+  const [windowDimensions, setWindowDimensions] = useState({
+    width: 0,
+    height: 0,
+  });
 
-    const [windowSize, setWindowSize] = useState({
-        width: window.innerWidth,
-        height: window.innerHeight,
-    });
-
-    useEffect(() => {
-        const handleResize = () => {
-            setWindowSize({
+  useEffect(() => {
+    const updateDimensions = () => {
+        if (window.innerWidth < 950) {
+            setWindowDimensions({
+                width: 950, 
+                height: window.innerHeight,
+            })
+        } else {
+            setWindowDimensions({
                 width: window.innerWidth,
                 height: window.innerHeight,
             });
-        };
+        } 
+    };
 
-        window.addEventListener("resize", handleResize);
-        return () => {
-            window.removeEventListener("resize", handleResize);
-        };
-    }, []);
+    // Set initial dimensions and add event listener
+    updateDimensions();
+    window.addEventListener("resize", updateDimensions);
 
-    return (
-        <Image
-            src="/forest.svg"
-            alt="A beautiful landscape"
-            width={innerWidth}
-            height={innerHeight}
-            className=""
-        />
-    );
-}
+    // Cleanup event listener on component unmount
+    return () => window.removeEventListener("resize", updateDimensions);
+  }, []);
+
+  return (
+    <Image
+      src="/forest.svg" // Replace with your image path
+      alt="A beautiful landscape"
+      height={3}
+      width={windowDimensions.width}
+      className="object-cover absolute bottom-0 max-w-none"
+    />
+  );
+};
 
 export default BackgroundPic;

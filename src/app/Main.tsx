@@ -8,8 +8,8 @@ import BackgroundPic from "../components/BackgroundPic";
 const Main = () => {
 
     return (
-        <div className="relative h-screen w-screen">
-            <div className="absolute h-1/2">
+        <div className="relative w-screen h-screen bg-black overflow-scroll">
+            <div className="absolute h-2/3 w-screen overflow-x-hidden">
                 <BackgroundPic/>  
             </div>
             <div className="relative p-10">
