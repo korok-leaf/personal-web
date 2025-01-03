@@ -4,9 +4,12 @@ import { div } from "framer-motion/client"
 import { FocusCards } from "./ui/focus-cards";
 import Header from "./Header";
 import { TextGenerateEffect } from "./ui/textEffect";
+import {useRouter} from "next/navigation";
 
 
 const Projects = () => {
+    const router = useRouter();
+
     const cards = [
         {
             title: "Forest Adventure",
@@ -29,6 +32,12 @@ const Projects = () => {
             src: "https://images.unsplash.com/photo-1507041957456-9c397ce39c97?q=80&w=3456&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         },
     ];
+
+    const profileClick = () => {
+        router.push("/");
+    }
+
+
     return (
         <div className="relative p-10">
             <div className="flex float-right">
@@ -37,8 +46,10 @@ const Projects = () => {
                         src="/korok.jpg"
                         alt="A beautiful landscape"
                         width={70} // Set width of the image
-                        height={200} // Set height of the image
-                        className="rounded-full shadow-lg scale-150 animate-profileA"
+                        height={200} // Set height of the image // scale-150 translate-x-6 translate-y-6 animation-delay-1000 animate-profileA 
+                        className="rounded-full shadow-lg 
+                                   transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 duration-300"
+                        onClick={profileClick}
                     />
                 </div>
                 <div className="flex right-0">
@@ -50,7 +61,7 @@ const Projects = () => {
                 <TextGenerateEffect words={"Welcome to my Projects"}/>
             </div>
             <div className="flex w-full">
-                <FocusCards cards={cards} />;
+                <FocusCards cards={cards} />
             </div>
         </div>
     )
