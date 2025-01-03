@@ -13,6 +13,7 @@ export default {
         shrink: "shrink 1s ease-out forwards",
         slideBottom: "slideBottom 1s ease-in forwards",
         slideTop: "slideTop 1s ease-in forwards",
+        profileA: "profileA 1s ease-in forwards", 
       },
 
       animationDelay: {
@@ -54,7 +55,15 @@ export default {
             transform: "translateY(0)",
             opacity: "1",
           }
-        }
+        },
+        profileA: {
+          "0%": {
+            transform: "translateX(30%) translatey(30%) scale(1.5)",
+          },
+          "100%": {
+            transform: "translateX(0) translateX(0) scale(1)",
+          }
+        },
       },
 
       colors: {

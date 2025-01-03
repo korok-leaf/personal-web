@@ -16,8 +16,7 @@ export default function Intro() {
     const intro = "Alex Qin";
 
     return (
-        <div className="bg-transparent w-full pt-20 rounded-md flex md:items-center md:justify-center antialiased relative ">
-            
+        <div className="bg-transparent w-full pt-10 rounded-md flex md:items-center md:justify-center antialiased relative ">
             <div className=" p-4 max-w-7xl  mx-auto relative z-10  w-full pt-20 md:pt-0">
                 <div className="opacity-0 animate-slideBottom animation-delay-1000 mb-10">
                     <p className="mt-4 font-normal text-4xl text-black max-w-lg text-center mx-auto">

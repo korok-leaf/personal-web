@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { div } from "framer-motion/client"
 import { FocusCards } from "./ui/focus-cards";
 import Header from "./Header";
@@ -29,14 +30,25 @@ const Projects = () => {
         },
     ];
     return (
-        <div>
-            <Header/>
-            <div className="">
+        <div className="block p-10">
+            <div className="relative h-10">
+                <div className="flex float-left">
+                    <Image
+                        src="/korok.jpg"
+                        alt="A beautiful landscape"
+                        width={70} // Set width of the image
+                        height={200} // Set height of the image
+                        className="rounded-full shadow-lg scale-150 animate-profileA"
+                    />
+                </div>
+                <Header/>
+            </div>
+            <div className="relative">
                 <div className="text-4xl text-center p-10 mb-4 font-normal">
                     <TextGenerateEffect words={"Welcome to my Projects"}/>
                 </div>
             </div>
-            <div className="">
+            <div className="relative">
                 <FocusCards cards={cards} />;
             </div>
         </div>
