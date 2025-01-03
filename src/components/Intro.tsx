@@ -46,7 +46,7 @@ export default function Intro() {
 
                     <div className="flex justify-center mt-10 space-x-4">
                         <a
-                            href="https://linkedin.com/in/your-username" // Your LinkedIn profile URL
+                            href="https://www.linkedin.com/in/alex-qin-503088316/" // Your LinkedIn profile URL
                             target="_blank" 
                             className="transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 duration-300"
                         >
@@ -54,7 +54,7 @@ export default function Intro() {
                         </a>
 
                         <a
-                            href="https://github.com/your-username" // Your GitHub profile URL
+                            href="https://github.com/korok-leaf" // Your GitHub profile URL
                             target="_blank"
                             rel="noopener noreferrer"
                             className="transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 duration-300"

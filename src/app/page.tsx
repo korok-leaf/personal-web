@@ -2,6 +2,7 @@
 import React from "react";
 import Image from "next/image";
 
+
 import Main from "./Main";
 import Projects from "../components/Projects";
 
