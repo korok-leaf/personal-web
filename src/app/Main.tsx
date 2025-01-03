@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 
 import Intro from "../components/Intro";
@@ -9,11 +10,11 @@ const Main = () => {
 
     return (
         <div className="relative w-screen h-screen bg-black overflow-scroll">
-            <div className="absolute h-2/3 w-screen overflow-x-hidden">
+            <div className="absolute h-2/3 w-screen">
                 <BackgroundPic/>  
             </div>
             <div className="relative p-10">
-                {/*<Header/>*/}
+                <Header/>
                 <Intro/>
             </div>
         </div>
