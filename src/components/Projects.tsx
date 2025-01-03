@@ -1,5 +1,9 @@
+"use client";
 import { div } from "framer-motion/client"
 import { FocusCards } from "./ui/focus-cards";
+import Header from "./Header";
+import { TextGenerateEffect } from "./ui/textEffect";
+
 
 const Projects = () => {
     const cards = [
@@ -26,7 +30,15 @@ const Projects = () => {
     ];
     return (
         <div>
-            <FocusCards cards={cards} />;
+            <Header/>
+            <div className="">
+                <div className="text-4xl text-center p-10 mb-4 font-normal">
+                    <TextGenerateEffect words={"Welcome to my Projects"}/>
+                </div>
+            </div>
+            <div className="">
+                <FocusCards cards={cards} />;
+            </div>
         </div>
     )
 }
