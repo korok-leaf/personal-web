@@ -39,8 +39,8 @@ const Projects = () => {
 
 
     return (
-        <div className="relative p-10">
-            <div className="flex float-right">
+        <div className="relative p-10 min-w-96">
+            <div className="flex w-full">
                 <div className="flex float-left">
                     <Image
                         src="/korok.jpg"
@@ -52,7 +52,7 @@ const Projects = () => {
                         onClick={profileClick}
                     />
                 </div>
-                <div className="flex right-0">
+                <div className="flex float-right">
                     <Header/>
                 </div>
                 
