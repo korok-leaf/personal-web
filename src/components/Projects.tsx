@@ -40,23 +40,22 @@ const Projects = () => {
 
     return (
         <div className="relative p-10 min-w-96">
-            <div className="flex w-full">
-                <div className="flex float-left">
+            <div className="flex w-full items-center justify-between">
+                <div className="flex">
                     <Image
                         src="/korok.jpg"
                         alt="A beautiful landscape"
-                        width={70} // Set width of the image
-                        height={200} // Set height of the image // scale-150 translate-x-6 translate-y-6 animation-delay-1000 animate-profileA 
-                        className="rounded-full shadow-lg 
-                                   transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 duration-300"
+                        width={70}
+                        height={200}
+                        className="rounded-full shadow-lg transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
                         onClick={profileClick}
                     />
                 </div>
-                <div className="flex float-right">
-                    <Header/>
+                <div className="flex">
+                    <Header />
                 </div>
-                
             </div>
+
             <div className="flex w-full justify-center pb-10">
                 <TextGenerateEffect words={"Welcome to my Projects"}/>
             </div>

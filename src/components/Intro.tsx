@@ -1,6 +1,7 @@
 "use client";
 import React from 'react';
 import Image from 'next/image';
+import {useState, useEffect} from "react";
 import { TextGenerateEffect } from "./ui/textEffect";
 import { Spotlight } from "./ui/Spotlight";
 
@@ -15,8 +16,19 @@ export default function Intro() {
 
     const intro = "Alex Qin";
 
+
+    const [animation, setAnimation] = useState("first");
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setAnimation("next");
+        }, 2000); 
+
+        return () => clearTimeout(timer); // Clean up timer
+    }, []);
+
     return (
-        <div className="bg-transparent w-full pt-10 rounded-md flex md:items-center md:justify-center antialiased relative ">
+        <div className="bg-transparent w-full pt-10 rounded-md flex md:items-center md:justify-center antialiased relative">
             <div className=" p-4 max-w-7xl  mx-auto relative z-10  w-full pt-20 md:pt-0">
                 <div className="opacity-0 animate-slideBottom animation-delay-1000 mb-10">
                     <p className="mt-4 font-normal text-4xl text-black max-w-lg text-center mx-auto">
@@ -28,14 +40,25 @@ export default function Intro() {
                     </h1>
                 </div>
 
-                <div className="flex justify-center items-center z-50">
-                    <Image
-                        src="/korok.jpg"
-                        alt="A beautiful landscape"
-                        width={350} // Set width of the image
-                        height={200} // Set height of the image
-                        className="rounded-full shadow-lg scale-150 animate-shrink animation-delay-1000"
-                    />
+                <div className="relative flex justify-center items-center z-10">
+                    <div className={`${animation === "first" ? "" : "group"} relative`}>
+                        <Image
+                            src="/korok.jpg"
+                            alt="A beautiful landscape"
+                            width={350} // Set width of the image
+                            height={200} // Set height of the image
+                            className={`${animation === "first"
+                                ? "animate-shrink animation-delay-1000 scale-150"
+                                : "transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 hover:cursor-pointer"
+                                } rounded-full shadow-lg`}
+                        />
+
+                        {/* Popup */}
+                        <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-800 text-white text-sm px-4 py-2 rounded-lg shadow-lg">
+                            <div className="absolute left-1/2 transform -translate-x-1/2 bottom-[-10px] w-0 h-0 border-l-[10px] border-r-[10px] border-t-[10px] border-l-transparent border-r-transparent border-t-gray-800"></div>
+                            This is a popup message!
+                        </div>
+                    </div>
                 </div>
 
                 <div className="opacity-0 animate-slideTop animation-delay-1000 z-10">
