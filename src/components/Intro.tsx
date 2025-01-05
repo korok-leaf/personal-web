@@ -12,7 +12,7 @@ import {
 
 } from 'next-share';
 
-export default function Intro() {
+export default function Intro({ aboutMe, setAboutMe } : any) {
     const [animation, setAnimation] = useState("first");
 
     useEffect(() => {
@@ -36,7 +36,7 @@ export default function Intro() {
                     </h1>
                 </div>
 
-                <div className="relative flex justify-center items-center z-10">
+                <div className="relative flex justify-center items-center z-30">
                     <div className={`${animation === "first" ? "" : "group"} relative`}>
                         <Image
                             src="/korok.jpg"
@@ -47,6 +47,7 @@ export default function Intro() {
                                 ? "animate-shrink animation-delay-1000 scale-150"
                                 : "transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 hover:cursor-pointer"
                                 } rounded-full shadow-lg`}
+                            onClick={() => setAboutMe(!aboutMe)}
                         />
 
                         {/* Popup */}
