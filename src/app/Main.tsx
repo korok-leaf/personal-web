@@ -18,11 +18,11 @@ const Main = () => {
                 <BackgroundPic/>  
             </div>
             {aboutMe && (
-                <About />
+                <About setAboutMe={setAboutMe}/>
             )}
             <div className="relative p-10">
                 <Header/>
-                <Intro aboutMe={aboutMe} setAboutMe={setAboutMe}/>
+                <Intro setAboutMe={setAboutMe}/>
             </div>
 
             {/*<div className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-md z-20 flex justify-center items-center"></div>*/}

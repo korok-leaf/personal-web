@@ -12,7 +12,7 @@ import {
 
 } from 'next-share';
 
-export default function Intro({ aboutMe, setAboutMe } : any) {
+export default function Intro({setAboutMe } : any) {
     const [animation, setAnimation] = useState("first");
 
     useEffect(() => {
@@ -47,7 +47,7 @@ export default function Intro({ aboutMe, setAboutMe } : any) {
                                 ? "animate-shrink animation-delay-1000 scale-150"
                                 : "transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 hover:cursor-pointer"
                                 } rounded-full shadow-lg`}
-                            onClick={() => setAboutMe(!aboutMe)}
+                            onClick={() => setAboutMe(true)}
                         />
 
                         {/* Popup */}
