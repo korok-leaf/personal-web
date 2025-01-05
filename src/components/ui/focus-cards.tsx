@@ -18,8 +18,9 @@ export const Card = React.memo(
     <div
       onMouseEnter={() => setHovered(index)}
       onMouseLeave={() => setHovered(null)}
+      onClick={() => window.open(card.cardLink, "_blank")}
       className={cn(
-        "rounded-lg relative bg-gray-100 dark:bg-neutral-900 overflow-hidden h-60 md:h-96 w-full transition-all duration-300 ease-out",
+        "rounded-lg relative bg-gray-100 dark:bg-neutral-900 overflow-hidden h-60 md:h-96 w-full transition-all duration-300 ease-out hover:cursor-pointer",
         hovered !== null && hovered !== index && "blur-sm scale-[0.98]"
       )}
     >
