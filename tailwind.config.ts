@@ -14,6 +14,7 @@ export default {
         slideBottom: "slideBottom 1s ease-in forwards",
         slideTop: "slideTop 1s ease-in forwards",
         profileA: "profileA 1s ease-in forwards", 
+        fadeCenter: "fadeCenter 3s ease-out forwards",
       },
 
       animationDelay: {
@@ -63,6 +64,16 @@ export default {
           "100%": {
             transform: "translateX(0) translateX(0) scale(1)",
           }
+        },
+        fadeCenter: {
+          "0%": {
+            width: "0",
+            opacity: "0",
+          }, 
+          "100%": {
+            width: "80%",
+            opacity: "1",
+          },
         },
       },
 
