@@ -8,7 +8,7 @@ const About = ({setAboutMe} : any) => {
 
     return (
         <div className="absolute w-full inset-0 bg-black/50 backdrop-blur-md z-20 overflow-scroll">
-            <div className="relative flex flex-col items-center text-center p-10 animate-slideBottom">
+            <div className="relative flex flex-col items-center text-center p-10 animate-slideBottomFast">
                 <div className="w-full text-center text-7xl font-bold mb-6">About Me</div>
 
                 <div className="flex flex-col md:flex-row w-full md:w-2/3 p-5 gap-6">
@@ -49,14 +49,14 @@ const About = ({setAboutMe} : any) => {
                     <Badge source={"/java-script.png"} name={"javascript"}/>
                     <Badge source={"/java.png"} name={"java"}/>
                     <Badge source={"/nextjs.webp"} name={"next.js"}/>
-                    <Badge source={"/nodejs.svg"} name={"node.js"}/>
+                    <Badge source={"/nodejs.png"} name={"node.js"}/>
                     <Badge source={"/python.png"} name={"python"}/>
                     <Badge source={"/react.png"} name={"react"}/>
                     <Badge source={"/tailwind-css.svg"} name={"tailwind css"}/>
                     <Badge source={"/typescript.png"} name={"typescript"}/>
                 </div>
                 <div className="p-5">
-                    <button className="px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 
+                    <button className="px-6 py-3 bg-white-500 text-white font-semibold rounded-lg shadow-md hover:bg- 
                                        focus:outline-none focus:ring-2 focus:ring-blue-300 transition-all duration-300"
                             onClick={() => setAboutMe(false)}
                     >

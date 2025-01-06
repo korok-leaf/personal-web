@@ -16,6 +16,7 @@ export default {
         spotlight: "spotlight 2s ease .75s 1 forwards",
         shrink: "shrink 1s ease-out forwards",
         slideBottom: "slideBottom 1s ease-in forwards",
+        slideBottomFast: "slideBottom 0.3s ease-in forwards",
         slideTop: "slideTop 1s ease-in forwards",
         profileA: "profileA 1s ease-in forwards", 
         fadeCenter: "fadeCenter 3s ease-out forwards",
