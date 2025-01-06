@@ -60,9 +60,10 @@ export default function Intro({setAboutMe } : any) {
                 </div>
 
                 <div className="opacity-0 animate-slideTop animation-delay-1000 z-10">
-                    <p className="mt-4 font-normal text-lg text-neutral-300 max-w-lg text-center mx-auto">
+                    <p className="mt-4 font-normal text-lg text-neutral-300 max-w-lg text-center mx-auto pb-4">
                         I am a Computer Science student at the University of Waterloo
                     </p>
+                    <div className="text-xs text-center">hint: Seek out the figure with the towering backpack, and uncover the secrets he carries.</div>
 
                     <div className="flex justify-center mt-10 space-x-4">
                         <a
