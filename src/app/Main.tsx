@@ -13,7 +13,7 @@ const Main = () => {
     const [aboutMe, setAboutMe] = useState(false);
 
     return (
-        <div className="relative w-screen bg-black overflow-scroll min-w-96">
+        <div className="relative w-screen bg-black min-w-96">
             <div className="absolute h-2/3 w-screen overflow-hidden">
                 <BackgroundPic/>  
             </div>

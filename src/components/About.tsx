@@ -7,7 +7,7 @@ import Badge from "./Badge";
 const About = ({setAboutMe} : any) => {
 
     return (
-        <div className="absolute w-full inset-0 bg-black/50 backdrop-blur-md z-20 overflow-scroll">
+        <div className="absolute w-full inset-0 bg-black/50 backdrop-blur-md z-20">
             <div className="relative flex flex-col items-center text-center p-10 animate-slideBottomFast">
                 <div className="w-full text-center text-7xl font-bold mb-6">About Me</div>
 
