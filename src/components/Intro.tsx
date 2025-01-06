@@ -84,7 +84,7 @@ export default function Intro({setAboutMe } : any) {
                         </a>
 
                         <a
-                        href="resume"
+                        href="/AlexQinResume.pdf"
                         target="_blank"
                         >
                             <Image 
