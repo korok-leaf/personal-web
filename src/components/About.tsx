@@ -8,7 +8,7 @@ const About = ({setAboutMe} : any) => {
 
     return (
         <div className="absolute w-full inset-0 bg-black/50 backdrop-blur-md z-20 overflow-scroll">
-            <div className="relative flex flex-col items-center text-center p-10">
+            <div className="relative flex flex-col items-center text-center p-10 animate-slideBottom">
                 <div className="w-full text-center text-7xl font-bold mb-6">About Me</div>
 
                 <div className="flex flex-col md:flex-row w-full md:w-2/3 p-5 gap-6">

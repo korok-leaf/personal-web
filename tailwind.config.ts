@@ -8,6 +8,10 @@ export default {
   ],
   theme: {
     extend: {
+      textShadow: {
+        dark: '2px 2px 4px rgba(0, 0, 0, 0.7)', // Dark shadow
+        white: '2px 2px 4px rgba(255, 255, 255, 0.9)', // White shadow
+      },
       animation: {
         spotlight: "spotlight 2s ease .75s 1 forwards",
         shrink: "shrink 1s ease-out forwards",
@@ -100,6 +104,16 @@ export default {
         },
         ['responsive', 'hover']
       );
+    },
+    function ({ addUtilities }: { addUtilities: Function }) {
+      addUtilities({
+        '.text-shadow-dark': {
+          'text-shadow': '2px 2px 4px rgba(0, 0, 0, 0.7)',
+        },
+        '.text-shadow-white': {
+          'text-shadow': '2px 2px 4px rgba(255, 255, 255, 0.9)',
+        },
+      });
     },
   ],
 } satisfies Config;
