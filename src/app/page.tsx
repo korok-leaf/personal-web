@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import Image from "next/image";
+import Head from "next/head";
 
 
 import Main from "./Main";
@@ -10,10 +10,6 @@ export default function Home() {
   return (
     <div>
       <Main/>
-    {/*<Routes>
-      <Route path="/" element={<Main/>}/>
-      <Route path="/projects" element={<Projects/>}/>
-    </Routes>*/}
     </div>
   );
 }

@@ -18,7 +18,7 @@ const Projects = () => {
             cardLink: "https://github.com/Brucewang15/WatClub",
         },
         {
-            title: "Image Refiner",
+            title: "User Graphics Processor",
             src: "/badImage.webp",
             cardLink: "https://futurescienceleaders.com/blog/2023/06/a-way-to-refine-drawings-by-the-power-of-computation/",
         },
