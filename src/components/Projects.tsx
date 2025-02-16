@@ -13,6 +13,11 @@ const Projects = () => {
 
     const cards = [
         {
+            title: "Soccer Metrics",
+            src: "/soccerMetrics.png",
+            cardLink: "https://github.com/gordonzhang1/SoccerMetrics",
+        },
+        {
             title: "watClub",
             src: "/watClub.png",
             cardLink: "https://github.com/Brucewang15/WatClub",
